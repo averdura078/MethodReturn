@@ -33,7 +33,8 @@ namespace MethodReturn
             int num1 = Convert.ToInt16(q1Num1Input.Text);
             int num2 = Convert.ToInt16(q1Num2Input.Text);
            
-            Add(num1, num2);
+            int sum = Add(num1, num2);
+            q1Output.Text = $"{num1} + {num2} = {sum}";
 
 
 
@@ -77,11 +78,11 @@ namespace MethodReturn
         /// parameters, (x and y), adds them together, and then 
         /// returns the result back to the method call.       
 
-        public void Add(int x, int y)
+        public int Add(int x, int y)
         {
             int sum = x + y;
 
-            q1Output.Text = $"{x} + {y} = {sum}";
+            return sum;
         }
 
 
