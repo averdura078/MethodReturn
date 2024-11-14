@@ -33,7 +33,7 @@ namespace MethodReturn
             int num1 = Convert.ToInt16(q1Num1Input.Text);
             int num2 = Convert.ToInt16(q1Num2Input.Text);
            
-            Add(num1, num2); 
+            Add(num1, num2);
 
 
 
@@ -48,6 +48,11 @@ namespace MethodReturn
             /// Input: 6, 2
             /// The area is 18 units squared
 
+            double length = Convert.ToDouble(lengthInput.Text);
+            double width = Convert.ToDouble(widthInput.Text);
+
+            double rectangleArea = GetArea(length, width);
+            q2Output.Text = $"The area is {rectangleArea} units squared.";
 
 
             /// 3.  Get a value for question 3 and call the PrintPrice 
@@ -85,6 +90,12 @@ namespace MethodReturn
         /// area of a rectangle , and then returns the result 
         /// back to the method call.
 
+        public double GetArea(double length, double width)
+        {
+            double area = length * width;
+
+            return area;
+        }
 
 
         /// 3. Create a method called PrintPrice, that accepts 1 
